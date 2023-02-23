@@ -1,0 +1,23 @@
+version: '3'
+services:
+  server:
+    build: ./Backend
+    expose:
+      - "3005"
+    environment:
+      API_HOST: ${API_HOST}
+      APP_SERVER_PORT: ${APP_SERVER_PORT}
+    ports:
+      - "3005:3005"
+    
+    command:  npm start
+  
+  client:
+    build: ./Frontend
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    links:
+      - server
+
