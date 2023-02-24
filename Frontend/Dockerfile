@@ -12,4 +12,4 @@ RUN npm i axios
 COPY . /srv/front/
 
 ENTRYPOINT [ "npm", "run", "start" ]
-
+EXPOSE 3000
