@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function App() {
        useEffect(() => {
-        axios.get('http://3.85.234.204:3005/')
+        axios.get('http://172.31.21.59:3005/')
   .then(function (response) {
     // handle success
     console.log(response.data);
